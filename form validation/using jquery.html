@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html >
+
+<!-- Mirrored from themelooks.us/demo/thegraphy/html/preview/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Jan 2018 08:22:47 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+ 
+ 
+ 
+ 
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+     <script type="text/javascript">
+        $(document).ready(function(){
+              alert("hi");
+
+            $("#namef").hide();
+            $("#mailf").hide();
+            $("#msgf").hide();
+            
+            
+            var error_name = false;
+            var error_msg = false;
+             var error_mail = false;
+            
+            
+           
+            
+            
+            
+            $("#namee").focusout(function(){
+                   check_fname();
+                  });
+ 
+              $("#mail").focusout(function() {
+              check_email();
+              });
+ 
+              $("#msg").focusout(function() {
+                check_msg();
+                } );
+            
+      
+         
+         $("#btn").click(function(){
+                   check_btn();
+                  });
+            
+            
+            
+            
+            function check_fname() {
+              var pattern = /^[a-zA-Z]*$/;
+                 var fname = $("#namee").val();
+ 
+                if (pattern.test(fname) && fname !== '') {
+                  $("#namef").hide();
+                   $("#namee").css("border-bottom","2px solid #34F458");
+                }
+                else 
+                {
+               $("#namef").html("Enter Your Name");
+                 $("#namef").show();
+                $("#namee").css("border-bottom","2px solid #F90A0A");
+               error_name = true;
+    }
+}
+   
+            
+            
+            function check_email() {
+  var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  var email = $("#mail").val();
+ 
+   if(pattern.test(email) && email !== '') {
+     $("#mailf").hide();
+     $("#mail").css("border-bottom","2px solid #34F458");
+    } else {
+     $("#mailf").html("Invalid Email");
+     $("#mailf").show();
+     $("#mail").css("border-bottom","2px solid #F90A0A");
+     error_email = true;
+    }
+}
+    </script>
+    </head>
+    <body>
+    
+    
+    
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-8 pb--60">
+                        <!-- Contact Form Start -->
+                        <div class="contact--form" data-form="ajax">
+                            <h3 class="h3 mb--20 text-uppercase">Get In Touch</h3>
+
+                            <form id="contactForm" name="myForm"  action="http://themelooks.us/demo/thegraphy/html/preview/forms/contact-form.php"  method="post">
+                                
+                                <div class="row">
+                                    <div class="col-xs-6 col-xxs-12">
+                                        <div class="form-group">
+                                            
+                                    
+									<input type="text"  id="namee" name="Name" placeholder="Name" class="form-control" > <p id="namef" class="err">
+                                            
+                                    
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-xxs-12">
+                                        <div class="form-group">
+                                            
+                                        <input type="email" id="mail" name="email" placeholder="Email" class="form-control" > <p id="mailf" class="err">
+                                        
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="msg" placeholder="Message" class="form-control" ></textarea><p id=msgf class=err>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <button type="submit" id="btn"  class="btn btn-default" >Submit</button>
+                                    </div>
+                                </div>
+
+                                <div class="status"></div>
+                            </form>
+                        </div>
+                        <!-- Contact Form End -->
+                    </div>
+
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+   <script src="js/jquery.min.js"></script>
+    
+    
+    
+    
+    
+    </body>
+</html>
+        

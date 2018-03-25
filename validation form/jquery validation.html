@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+
+<head>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+
+
+
+<body>
+
+
+
+<form id="contactForm" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Full name</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="firstName" placeholder="First name" id=name><span id=namef class=err></span>
+        </div>
+       
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Email address</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="email" id=mail><span id=mailf class=err></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Message</label>
+        <div class="col-xs-9">
+            <textarea class="form-control" name="message" rows="7" id=msg></textarea><span id=msgf class=err></span>
+        </div>
+    </div>
+
+    
+
+    <div class="form-group">
+        <div class="col-xs-9 col-xs-offset-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+
+<script>
+        $(document).ready(function() {
+            
+            $("#namef").hide();
+            $("#mailf").hide();
+            $("#txtf").hide();
+        
+             var nam=false;
+             var maill=false;
+             var msg=false;
+            
+            
+            $("#name").focusout(function){
+                
+                alert("hi");
+                
+                
+            });
+            
+            
+            
+        });
+        </script>  
+
+</body>
+</html>

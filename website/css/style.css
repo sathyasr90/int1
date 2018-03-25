@@ -1,0 +1,44 @@
+body
+{
+	background:skyblue;
+
+}
+#field
+{
+    height: 500px;
+    width:550px;
+    margin-left: 350px;
+    margin-top: 50px;
+    border: 1 px solid blue ;
+    
+}
+#field h2
+{
+    color: cornflowerblue;
+    text-align: center;
+}
+#field legend
+{
+    color: dodgerblue;
+    font-size: 20px;
+}
+#tab td,p
+{
+    padding:10px;
+     color: darkgreen;
+
+}
+#tab input[type="text"],input[type="password"],input[type="submit"],select,input[type="reset"]
+{
+    color:blue;
+    border-radius: 5px;
+    width:250px;
+    height: 30px;
+    
+}
+.fom a
+{
+    padding: 5px;
+    text-decoration:none;
+    margin-left: 10px;
+}

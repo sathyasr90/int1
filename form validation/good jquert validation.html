@@ -1,0 +1,269 @@
+ <script type="text/javascript">
+        $(document).ready(function(){
+    
+
+            $("#f_name").hide();
+            $("#l_name").hide();
+            $("#u_name").hide();
+             $("#contact").hide();
+            $("#email").hide();
+            $("#pass1").hide();
+              $("#pass2").hide();
+            
+            
+            var error_name = false;
+            var error_msg = false;
+             var error_mail = false;
+            
+            
+           
+            
+            
+            
+            $("#fname").focusout(function(){
+                   check_fname();
+                  });
+            
+             $("#lname").focusout(function(){
+                   check_lname();
+                  });
+            
+             $("#uname").focusout(function(){
+                   check_uname();
+                  });
+            
+            $("#contactt").focusout(function(){
+                   check_contact();
+                  });
+            
+            
+             $("#mail").focusout(function() {
+              check_email();
+              });
+            
+            
+            $("#passs2").focusout(function(){
+                   check_password();
+                  });
+        
+            
+             
+             $("#btn").click(function(){
+                   check_btn();
+                  });
+            
+            
+            
+            
+            function check_fname() {
+              var pattern = /^[a-zA-Z]*$/;
+                 var fname = $("#fname").val();
+ 
+                if (pattern.test(fname) && fname !== '') {
+                  $("#f_name").hide();
+                   $("#fname").css("border-bottom","2px solid #34F458");
+                }
+                else 
+                {
+               $("#f_name").html("It should contain characters only");
+                 $("#f_name").show();
+                $("#fname").css("border-bottom","2px solid #F90A0A");
+               error_name = true;
+                }
+                      }
+            
+            
+            
+            function check_lname() {
+              var pattern = /^[a-zA-Z]*$/;
+                 var lname = $("#lname").val();
+ 
+                if (pattern.test(lname) && lname !== '') {
+                  $("#l_name").hide();
+                   $("#lname").css("border-bottom","2px solid #34F458");
+                }
+                else 
+                {
+               $("#l_name").html("It should contain characters only");
+                 $("#l_name").show();
+                $("#lname").css("border-bottom","2px solid #F90A0A");
+               error_name = true;
+                }
+                      }
+            
+            
+            
+            function check_uname() {
+              var pattern = /^[a-zA-Z]*$/;
+                 var uname = $("#uname").val();
+ 
+                if (pattern.test(uname) && uname !== '') {
+                  $("#u_name").hide();
+                   $("#uname").css("border-bottom","2px solid #34F458");
+                }
+                else 
+                {
+               $("#u_name").html("It should contain characters only");
+                 $("#u_name").show();
+                $("#uname").css("border-bottom","2px solid #F90A0A");
+               error_name = true;
+                }
+                      }
+            
+            function check_contact() {
+              var pattern = /^[0-9]*$/;
+                 var cont = $("#contactt").val();
+ 
+                if (pattern.test(cont) && cont !== '') {
+                  $("#contact").hide();
+                   $("#contactt").css("border-bottom","2px solid #34F458");
+                }
+                else 
+                {
+               $("#u_name").html("It should contain numbers only");
+                 $("#u_name").show();
+                $("#uname").css("border-bottom","2px solid #F90A0A");
+               error_name = true;
+                }
+                      }
+            
+            
+            function check_contact() {
+              var pattern = /^[0-9]*$/;
+                 var cont = $("#contactt").val();
+ 
+                if (pattern.test(cont) && cont !== '') {
+                  $("#contact").hide();
+                   $("#contactt").css("border-bottom","2px solid #34F458");
+                }
+                else 
+                {
+               $("#u_name").html("It should contain numbers only");
+                 $("#u_name").show();
+                $("#uname").css("border-bottom","2px solid #F90A0A");
+               error_name = true;
+                }
+                      }
+            
+            
+            
+            
+   
+            
+            
+            function check_email() {
+  var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  var email = $("#mail").val();
+ 
+   if(pattern.test(email) && email !== '') {
+     $("#email").hide();
+     $("#mail").css("border-bottom","2px solid #34F458");
+    } else {
+     $("#email").html("Invalid Email");
+     $("#email").show();
+     $("#mail").css("border-bottom","2px solid #F90A0A");
+     error_email = true;
+    }
+}
+          
+            
+            
+            
+            function check_password() {
+              
+                 var passw1 = $("#passs1").val();
+                var passw2 = $("#passs2").val();
+                
+ 
+                if (passw1 == passw2) 
+                {
+                     $("#pass2").hide();
+                  
+                   
+                }
+                else 
+                {
+                    
+                      $("#pass2").html("Password mismatch...");
+                 $("#pass2").show();
+                $("#passs2").css("border-bottom","2px solid #F90A0A");
+               error_msg = true;
+                 
+                    
+              
+    }
+}
+            
+            
+            
+            
+                  
+            function check_msg() {
+              
+                 var msg = $("#msg").val();
+                
+ 
+                if (msg !== '') 
+                {
+                     $("#msgf").hide();
+                   $("#msg").css("border-bottom","2px solid #34F458");
+                   
+                }
+                else 
+                {
+                    
+                      $("#msgf").html("Please Enter Some Msg Here...");
+                 $("#msgf").show();
+                $("#msg").css("border-bottom","2px solid #F90A0A");
+               error_msg = true;
+                 
+                    
+              
+    }
+}
+   
+            
+              function check_btn() {
+              
+                 var fnamee = $("#namee").val();
+                   var emaill = $("#mail").val();
+                   var msgg = $("#msg").val();
+ 
+                if ( fnamee == '' && emaill == '' && msgg == '') {
+                    
+                    
+                     $("#namef").html("Please Enter Your Name");
+                 $("#namef").show();
+                $("#namee").css("border-bottom","2px solid #F90A0A");
+               error_fname = true;
+                    
+                     $("#msgf").html("Please Enter Your Message...");
+                 $("#msgf").show();
+                $("#msg").css("border-bottom","2px solid #F90A0A");
+               error_fname = true;
+                    
+                    
+                    $("#mailf").html("Please Enter Your Email Id");
+     $("#mailf").show();
+     $("#mail").css("border-bottom","2px solid #F90A0A");
+     error_email = true;
+                    
+                  
+                }
+                else 
+                {
+               
+    }
+}
+   
+            
+            
+            
+            
+            
+            
+});
+              
+    </script>
+    
+    
